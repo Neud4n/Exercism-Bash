@@ -2,11 +2,14 @@
 
 check_divisibility() {
   if [ "$1" -eq 0 ]; then
-    return 0
+    echo "Ingrese un numero que sea mayor a cero"
+    exit 1
   else
-    return 1
+    return 0 
   fi
 }
+
+check_divisibility $1
 
 number=$1
 
